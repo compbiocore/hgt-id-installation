@@ -20,6 +20,10 @@ The UCSC version of hg19 is already prepared for use with the tool - for alterna
 
 ## Configuration
 
-Once the files are copied to the destination server, it is necessary to modify the configuration file `config.txt` in the HGT-ID root directory.  Each file path in this file must be changed to point to the respective resources (generally by replacing `/home/aleith/HGT-ID_v1.0` with whatever the file path to the new HGT-ID root directory is).
+Once the files are copied to the destination server, it is necessary to modify the configuration file `config.txt` in the HGT-ID root directory.  Each file path in this file must be changed to point to the respective resources (generally by replacing `ROOT_PATH` with whatever the file path to the new HGT-ID root directory is).
 
-This file was created at the time of installation and has file paths corresponding with locations on tdatasci - failing to modify every file path listed inside will result in errors.
+Failing to modify every file path listed inside will result in errors.
+
+A script to rapidly substitute a specific path into each entry exists in the HGT-ID root directory as `prepare_config.sh`, which can be run as follows:
+
+        bash prepare_config.sh [HGT-ID root directory path]
